@@ -8,8 +8,8 @@ load_dotenv()
 
 class LLMClient:
     def __init__(self):
-        self.base_url = os.getenv("LLM_BASE_URL", "http://localhost:11434")
-        self.model = os.getenv("LLM_MODEL", "gemma3:4b")
+        self.base_url = os.getenv("LLM_BASE_URL")
+        self.model = os.getenv("LLM_MODEL")
 
     def chat(self, messages):
         """Standardized chat interface using Ollama's /api/chat endpoint"""
